@@ -8,7 +8,14 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/api",(req, res)=> {
-res.json({cars: ["Mercedes", "Toyota", "Ford", "Opel"]});
+res.json({
+    people:  [
+        { name: "Madhuri", age: 30, gender: "Female" },
+        { name: "Nitin", age: 32, gender: "Male" },
+        { name: "Mads", age: 30, gender: "Female" },
+        { name: "Nitz", age: 32, gender: "Male" },
+      ],
+});
 });
 
 app.listen(8080, () => {
